@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="BodyTracker.View.StartPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BodyTracker.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:BodyTracker.ViewModel"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <viewModel:StartViewModel/>
+    </Page.DataContext>
+
+    <RelativePanel>
+        <ListView Name="UserList" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" ItemsSource="{Binding UserHandler.Users}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                        <TextBlock Text="Last login:"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel RelativePanel.AlignHorizontalCenterWith="UserList" RelativePanel.Below="UserList" Orientation="Horizontal">
+            <Button Content="Opret"></Button>
+            <Button Content="Login"></Button>
+        </StackPanel>
+    </RelativePanel>
+</Page>
