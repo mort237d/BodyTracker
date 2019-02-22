@@ -16,5 +16,7 @@
     <RelativePanel>
         <Image Name="ProfilePicture" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" Source="UserPicture.png" Height="100"></Image>
         <TextBlock RelativePanel.Below="ProfilePicture" Text="Navn"></TextBlock>
+
+        <ListView RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Height="200" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.VerticalScrollMode="Disabled"></ListView>
     </RelativePanel>
 </Page>
