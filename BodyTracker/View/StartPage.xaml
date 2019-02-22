@@ -19,6 +19,7 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Name}"></TextBlock>
                         <TextBlock Text="Last login:"></TextBlock>
+                        <TextBlock Text="{Binding LastLogon}"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
