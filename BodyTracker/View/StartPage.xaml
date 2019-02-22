@@ -13,19 +13,19 @@
     </Page.DataContext>
 
     <RelativePanel>
-        <ListView Name="UserList" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" ItemsSource="{Binding UserHandler.Users}">
+        <ListView Name="UserList" SelectedItem="{Binding UserHandler.SelectedUser, Mode=TwoWay}" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" ItemsSource="{Binding UserHandler.Users}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Name}"></TextBlock>
-                        <TextBlock Text="Last login:"></TextBlock>
+                        <TextBlock Text="{Binding Name}"/>
+                        <TextBlock Text="{Binding LastLogin}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel RelativePanel.AlignHorizontalCenterWith="UserList" RelativePanel.Below="UserList" Orientation="Horizontal">
-            <Button Content="Opret"></Button>
-            <Button Content="Login"></Button>
+            <Button Content="Opret" Command="{Binding CreateUserCommand}"/>
+            <Button Content="Login" Command="{Binding ChooseUserCommand}"/>
         </StackPanel>
     </RelativePanel>
 </Page>
