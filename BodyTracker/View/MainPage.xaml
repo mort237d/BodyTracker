@@ -13,7 +13,8 @@
         <viewModel:mainViewModel/>
     </Page.DataContext>
 
-    <Grid>
-
-    </Grid>
+    <RelativePanel>
+        <Image Name="ProfilePicture" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" Source="UserPicture.png" Height="100"></Image>
+        <TextBlock RelativePanel.Below="ProfilePicture" Text="Navn"></TextBlock>
+    </RelativePanel>
 </Page>
