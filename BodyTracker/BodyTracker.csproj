@@ -119,6 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Log.cs" />
+    <Compile Include="Model\LogHandler.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserHandler.cs" />
     <Compile Include="Properties\Annotations.cs" />
