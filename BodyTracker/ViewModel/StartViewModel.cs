@@ -12,13 +12,15 @@ namespace BodyTracker.ViewModel
     {
         public UserHandler UserHandler { get; set; } = new UserHandler();
 
-        public RelayCommand CreateUserCommand {get; set;}
+        public RelayCommand CreateUserPopupCommand {get; set;}
         public RelayCommand ChooseUserCommand {get; set;}
+        public RelayCommand CreateNewUserCommand { get; set; }
 
         public StartViewModel()
         {
-            CreateUserCommand = new RelayCommand(UserHandler.CreateUserPopup);
+            CreateUserPopupCommand = new RelayCommand(UserHandler.CreateUserPopup);
             ChooseUserCommand = new RelayCommand(UserHandler.ChooseUser);
+            CreateNewUserCommand = new RelayCommand(UserHandler.CreateNewUser);
         }
 
     }

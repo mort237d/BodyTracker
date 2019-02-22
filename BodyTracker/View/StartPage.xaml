@@ -21,10 +21,15 @@
                 </TransitionCollection>
             </Popup.ChildTransitions>
 
-            <StackPanel Background="BurlyWood" Height="1000" Width="500" Orientation="Horizontal">
-                <TextBox PlaceholderText="Navn" Text="{Binding UserHandler.CreateUserName, Mode=TwoWay}" Margin="10,7,0,0" Width="250" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox PlaceholderText="Gender"></TextBox>
-                <Button ></Button>
+            <StackPanel Background="BurlyWood" Height="1000" Width="500" Orientation="Vertical">
+                <TextBox PlaceholderText="Navn" Text="{Binding UserHandler.CreateUserName, Mode=TwoWay}" Margin="2,0,0,0" Width="250" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox PlaceholderText="Køn" Text="{Binding UserHandler.CreateUserName, Mode=TwoWay}" Margin="2,0,0,0" Width="250" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox PlaceholderText="Vægt" Text="{Binding UserHandler.CreateUserName, Mode=TwoWay}" Margin="2,0,0,0" Width="250" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox PlaceholderText="Fedt procent" Text="{Binding UserHandler.CreateUserName, Mode=TwoWay}" Margin="2,0,0,0" Width="250" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox PlaceholderText="Højde" Text="{Binding UserHandler.CreateUserName, Mode=TwoWay}" Margin="2,0,0,0" Width="250" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox PlaceholderText="Alder" Text="{Binding UserHandler.CreateUserName, Mode=TwoWay}" Margin="2,0,0,0" Width="250" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox PlaceholderText="Fødselsdag" Text="{Binding UserHandler.CreateUserName, Mode=TwoWay}" Margin="2,0,0,0" Width="250" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Content="Opret bruger!" Command="{Binding CreateNewUserCommand}"/>
             </StackPanel>
         </Popup>
 
@@ -40,7 +45,7 @@
             </ListView.ItemTemplate>
         </ListView>
         <StackPanel RelativePanel.AlignHorizontalCenterWith="UserList" RelativePanel.Below="UserList" Orientation="Horizontal">
-            <Button Content="Opret" Command="{Binding CreateUserCommand}" Width="100"/>
+            <Button Content="Opret" Command="{Binding CreateUserPopupCommand}" Width="100"/>
             <Button Content="Login" Command="{Binding ChooseUserCommand}" Width="100"/>
         </StackPanel>
     </RelativePanel>

@@ -23,5 +23,10 @@ namespace BodyTracker.Model
             Age = age;
             Birthday = birthday;
         }
+
+        public User(string name)
+        {
+            Name = name;
+        }
     }
 }

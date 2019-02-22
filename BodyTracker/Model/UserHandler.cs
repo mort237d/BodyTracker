@@ -42,7 +42,7 @@ namespace BodyTracker.Model
             CreateUserPopUp = true;
         }
 
-        public void CreateNewUser(string name, double weight)
+        public void CreateNewUser()
         {
 
         }
