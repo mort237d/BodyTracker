@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 
 namespace BodyTracker.Model
 {
@@ -12,6 +13,7 @@ namespace BodyTracker.Model
         public int Age { get; set; }
         public DateTime LastLogon { get; set; }
         public DateTime Birthday { get; set; }
+        public ObservableCollection<Log> Logs { get; set; }
 
         public User(string name, string gender, double weight, double fatPercentage, double height, int age, DateTime birthday)
         {
@@ -22,6 +24,8 @@ namespace BodyTracker.Model
             Height = height;
             Age = age;
             Birthday = birthday;
+
+            Logs = new ObservableCollection<Log>();
         }
 
         public User(string name)
