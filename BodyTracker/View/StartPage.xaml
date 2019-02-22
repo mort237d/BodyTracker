@@ -13,6 +13,7 @@
     </Page.DataContext>
 
     <RelativePanel>
+        <ListView Name="UserList" SelectedItem="{Binding UserHandler.SelectedUser, Mode=TwoWay}" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" ItemsSource="{Binding UserHandler.Users}">
         <ListView Name="UserList" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" ItemsSource="{Binding UserHandler.Users}" Margin="20" BorderBrush="Black" BorderThickness="2" Width="200" Height="300">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -23,6 +24,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <StackPanel RelativePanel.AlignHorizontalCenterWith="UserList" RelativePanel.Below="UserList" Orientation="Horizontal">
+            <Button Content="Opret" Command="{Binding CreateUserCommand}"/>
+            <Button Content="Login" Command="{Binding ChooseUserCommand}"/>
         <StackPanel RelativePanel.AlignHorizontalCenterWith="UserList" RelativePanel.Below="UserList" Orientation="Horizontal" Width="200">
             <Button Content="Opret" Width="100"></Button>
             <Button Content="Login" Width="100"></Button>

@@ -4,17 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BodyTracker.Model;
+using GalaSoft.MvvmLight.Command;
 
 namespace BodyTracker.ViewModel
 {
     class StartViewModel
     {
-        private UserHandler _userHandler = new UserHandler();
+        public UserHandler UserHandler { get; set; } = new UserHandler();
 
-        public UserHandler UserHandler
+        public RelayCommand CreateUserCommand {get; set;}
+        public RelayCommand ChooseUserCommand {get; set;}
+
+        public StartViewModel()
         {
-            get { return _userHandler; }
-            set { _userHandler = value; }
+            CreateUserCommand = new RelayCommand(UserHandler.CreateUser);
+            ChooseUserCommand = new RelayCommand(UserHandler.ChooseUser);
         }
+
     }
 }
