@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserHandler.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\mainViewModel.cs" />
     <Compile Include="ViewModel\StartViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">

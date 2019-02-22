@@ -17,7 +17,7 @@ namespace BodyTracker.ViewModel
 
         public StartViewModel()
         {
-            CreateUserCommand = new RelayCommand(UserHandler.CreateUser);
+            CreateUserCommand = new RelayCommand(UserHandler.CreateUserPopup);
             ChooseUserCommand = new RelayCommand(UserHandler.ChooseUser);
         }
 

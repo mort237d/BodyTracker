@@ -13,6 +13,22 @@
     </Page.DataContext>
 
     <RelativePanel>
+
+        <Popup IsOpen="{Binding UserHandler.CreateUserPopUp}" LightDismissOverlayMode="On" IsLightDismissEnabled="True" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+            <Popup.ChildTransitions>
+                <TransitionCollection>
+                    <PaneThemeTransition Edge="Top"/>
+                </TransitionCollection>
+            </Popup.ChildTransitions>
+
+            <StackPanel Background="BurlyWood" Height="1000" Width="500" Orientation="Horizontal">
+                <TextBox PlaceholderText="Navn" Text="{Binding UserHandler.CreateUserName, Mode=TwoWay}" Margin="10,7,0,0" Width="250" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox PlaceholderText="Gender"></TextBox>
+                <Button ></Button>
+            </StackPanel>
+        </Popup>
+
+
         <ListView Name="UserList" SelectedItem="{Binding UserHandler.SelectedUser, Mode=TwoWay}" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" ItemsSource="{Binding UserHandler.Users}" Margin="20" BorderBrush="Black" BorderThickness="2" Width="200" Height="300">
             <ListView.ItemTemplate>
                 <DataTemplate>
